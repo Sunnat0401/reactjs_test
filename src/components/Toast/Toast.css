@@ -1,0 +1,39 @@
+.toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--text-primary);
+    color: white;
+    padding: 16px 24px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-xl);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 1000;
+    font-size: 14px;
+    font-weight: 500;
+    animation: slideUp 0.3s ease forwards;
+  }
+  
+  .toast.success {
+    background: var(--success-color);
+  }
+  
+  .toast.error {
+    background: var(--danger-color);
+  }
+  
+  @keyframes slideUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .toast {
+      left: 20px;
+      right: 20px;
+    }
+  }
